@@ -72,3 +72,9 @@ document.oncontextmenu = function(){
                 event.returnValue = false;
             };
 $(iframe).contents().find('body').attr('oncontextmenu',"javascript:return false;");
+document.getElementsByTag('iframe')[0].onload = function(){
+		window.document.getElementsByTag('iframe')[0].contentWindow.document.oncontextmenu  = function(){
+			alert('请不要点击鼠标右键！');
+			return false;
+			}
+	}
