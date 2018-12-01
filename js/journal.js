@@ -68,3 +68,6 @@ app = new Vue({
 });
 
 new SmoothScroll('a#globalBackToTop');
+document.oncontextmenu = function(){
+                event.returnValue = false;
+            };
