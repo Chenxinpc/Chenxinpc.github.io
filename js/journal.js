@@ -71,3 +71,4 @@ new SmoothScroll('a#globalBackToTop');
 document.oncontextmenu = function(){
                 event.returnValue = false;
             };
+$(iframe).contents().find('body').attr('oncontextmenu',"javascript:return false;");
