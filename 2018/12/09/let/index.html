@@ -8,7 +8,8 @@
 <meta charset="utf-8">
 <meta name="X-UA-Compatible" content="IE=edge">
 <meta name="author" content="is_chenxin">
-<meta name="description" content="let命令1234567var a = [];for (var i = 0; i &amp;lt; 10; i++) &amp;#...">
+<meta name="description" content="let命令
+基本用法1234567var a = [];for (var i = 0; i &amp;lt; 10; i+...">
 <meta name="keywords" content="">
 
 <link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
@@ -20,7 +21,7 @@
     <meta name="renderer" content="webkit">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/journal.css?80851924">
+<link rel="stylesheet" href="/css/journal.css?68910392">
 <script src="/js/loadCSS.js"></script>
 <script>
     loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
@@ -63,10 +64,10 @@
     <div class="drawer-content">
         <div class="drawer-menu">
             <a class="a-block drawer-menu-item false" href="https://isboyTop.github.io">
-                首頁
+                ホーム
             </a>
             <a class="a-block drawer-menu-item false" href="/archives">
-                歸檔
+                記事一覧
             </a>
 
             
@@ -114,7 +115,7 @@
 
     <div class="nav-link-list">
         <a class="a-block no-tint nav-link-item false" href="/archives">
-            歸檔
+            記事一覧
         </a>
 
         
@@ -166,11 +167,15 @@
         </div>
         <div class="post-body-wrapper">
             <div class="post-body">
-                <h1 id="let命令"><a href="#let命令" class="headerlink" title="let命令"></a>let命令</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  a[i] = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">a[<span class="number">6</span>](); <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
+                <h1 id="let命令"><a href="#let命令" class="headerlink" title="let命令"></a>let命令</h1><hr>
+<h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  a[i] = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">a[<span class="number">6</span>](); <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  a[i] = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">a[<span class="number">6</span>](); <span class="comment">// 6</span></span><br></pre></td></tr></table></figure>
 <p>变量i是let声明的，当前的i只在本轮循环有效，所以每一次循环的i其实都是一个新的变量，所以最后输出的是6。你可能会问，如果每一轮循环的变量i都是重新声明的，那它怎么知道上一轮循环的值，从而计算出本轮循环的值？这是因为 JavaScript 引擎内部会记住上一轮循环的值，初始化本轮的变量i时，就在上一轮循环的基础上进行计算。</p>
 <p>另外，for循环还有一个特别之处，就是设置循环变量的那部分是一个父作用域，而循环体内部是一个单独的子作用域。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">let</span> i = <span class="string">'abc'</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// abc</span></span><br><span class="line"><span class="comment">// abc</span></span><br><span class="line"><span class="comment">// abc</span></span><br></pre></td></tr></table></figure></p>
-
+<h3 id="不存在变量提升"><a href="#不存在变量提升" class="headerlink" title="不存在变量提升"></a>不存在变量提升</h3><p><code>var</code>命令存在‘变量提升’现象。变量可以在声明之前使用，值为<code>undefind</code>.<br><code>let</code>所声明的变量一定要在声明后使用，否则报错<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// var 的情况</span></span><br><span class="line"><span class="built_in">console</span>.log(foo); <span class="comment">// 输出undefined</span></span><br><span class="line"><span class="keyword">var</span> foo = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// let 的情况</span></span><br><span class="line"><span class="built_in">console</span>.log(bar); <span class="comment">// 报错ReferenceError</span></span><br><span class="line"><span class="keyword">let</span> bar = <span class="number">2</span>;</span><br></pre></td></tr></table></figure></p>
+<pre><code>上面代码中，变量foo用var命令声明，会发生变量提升，即脚本开始运行时，变量foo已经存在了，但是没有值，所以会输出undefined。变量bar用let命令声明，不会发生变量提升。这表示在声明它之前，变量bar是不存在的，这时如果用到它，就会抛出一个错误。
+</code></pre><hr>
+<h3 id="暂时性死区"><a href="#暂时性死区" class="headerlink" title="暂时性死区"></a>暂时性死区</h3>
             </div>
         </div>
         <nav class="post-pagination">
@@ -178,7 +183,7 @@
     <span class="page-number"></span>
     
     <a class="older-posts" href="/2018/12/08/Textarea 的高度自动增长/">
-        下一篇<br>Textarea的高度自动增长
+        次の記事<br>Textarea的高度自动增长
     </a>
     
 </nav>
@@ -202,7 +207,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js" integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js" integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
-<script src="/js/journal.js?1449210"></script>
+<script src="/js/journal.js?56295820"></script>
 
 
 
