@@ -20,7 +20,7 @@
     <meta name="renderer" content="webkit">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/journal.css?20622379">
+<link rel="stylesheet" href="/css/journal.css?41052231">
 <script src="/js/loadCSS.js"></script>
 <script>
     loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
@@ -63,10 +63,10 @@
     <div class="drawer-content">
         <div class="drawer-menu">
             <a class="a-block drawer-menu-item false" href="https://isboyTop.github.io">
-                ホーム
+                Home
             </a>
             <a class="a-block drawer-menu-item false" href="/archives">
-                記事一覧
+                Archive
             </a>
 
             
@@ -114,7 +114,7 @@
 
     <div class="nav-link-list">
         <a class="a-block no-tint nav-link-item false" href="/archives">
-            記事一覧
+            Archive
         </a>
 
         
@@ -166,7 +166,24 @@
         </div>
         <div class="post-body-wrapper">
             <div class="post-body">
-                <h1 id="Node-js介绍"><a href="#Node-js介绍" class="headerlink" title="Node.js介绍"></a>Node.js介绍</h1><p>基于Chrome的V8 JS解析引擎之上，解放了Javascript的编程能力，为Javascript提供了后端编程能力；所以说，Nodejs是一个让Javascript进行后端编程的一个运行平台；<br><code>v8引擎：v8引擎是一个Javascript引擎实现，最初由一些语言专家设计，后被谷歌收购，随后谷歌对其进行了开源。v8使用C++开发，js在v8引擎下运行媲美二进制的速度（编译型语言和解析性语言）</code><br><code>编译型语言：linux java c++ c#</code></p>
+                <h2 id="Node-js介绍"><a href="#Node-js介绍" class="headerlink" title="Node.js介绍"></a>Node.js介绍</h2><p>基于Chrome的V8 JS解析引擎之上，解放了Javascript的编程能力，为Javascript提供了后端编程能力；所以说，Nodejs是一个让Javascript进行后端编程的一个运行平台；<br><code>v8引擎：v8引擎是一个Javascript引擎实现，最初由一些语言专家设计，后被谷歌收购，随后谷歌对其进行了开源。v8使用C++开发，js在v8引擎下运行媲美二进制的速度（编译型语言和解析性语言）</code><br><code>编译型语言：linux java c++ c#</code><br><code>作用</code>：可以在nodejs的平台上使用js语法来编写后台逻辑。</p>
+<h2 id="开发环境搭建"><a href="#开发环境搭建" class="headerlink" title="开发环境搭建"></a>开发环境搭建</h2><h3 id="LTS和Current版本区别"><a href="#LTS和Current版本区别" class="headerlink" title="LTS和Current版本区别"></a>LTS和Current版本区别</h3><p>1.LTS是长期稳定版的意思（这个安装包用起来比较稳定）【推荐在企业中使用】<br>2.Current是最新特征版，这个安装包中有最新的Node特征，但是，可能有一些潜藏的Bug未解决【推荐学习或尝鲜去使用】</p>
+<h3 id="查看Node版本号"><a href="#查看Node版本号" class="headerlink" title="查看Node版本号"></a>查看Node版本号</h3><p>打开终端，在命令行输入命令node -v即可<br>如何进入终端？<br>1.使用快捷键windows徽标 + R 打开运行面板 输入cmd 回车<br>2.在任意目录的空白位置，先按住shift键不松开，然后，在空白位置，鼠标右键单击，打开 prowershell/cmd窗口【将来第二种方式用的会多一些】<br>3.两种方法不同之处在于，后者打开的路径是不一样的。</p>
+<h3 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h3><h4 id="Path环境变量的作用：能让我们通过命令行的形式，快速启动一些应用程序；"><a href="#Path环境变量的作用：能让我们通过命令行的形式，快速启动一些应用程序；" class="headerlink" title="Path环境变量的作用：能让我们通过命令行的形式，快速启动一些应用程序；"></a>Path环境变量的作用：能让我们通过命令行的形式，快速启动一些应用程序；</h4><h4 id="系统环境变量和用户环境变量的区别"><a href="#系统环境变量和用户环境变量的区别" class="headerlink" title="系统环境变量和用户环境变量的区别"></a>系统环境变量和用户环境变量的区别</h4><p>1.用户环境变量，是每一个用户私有的，用户之间不共享；<br>2.全局变量，是共享的，只要你能登陆这台计算机，就能访问到全局环境变量；【今后在配置环境变量的时候，推荐直接配置到系统环境变量】</p>
+<h2 id="nodejs的组成部分"><a href="#nodejs的组成部分" class="headerlink" title="nodejs的组成部分"></a>nodejs的组成部分</h2><p><strong>浏览器组成部分</strong><br><code>EcmaScript+dom+bom</code><br><strong>nodejs里面的组成部分</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/<span class="number">1.</span>模块 nodejs会把每个独立的js当成是一个模块</span><br><span class="line">/<span class="number">2.</span>EcmaScript+模块成员+成员</span><br></pre></td></tr></table></figure></p>
+<h2 id="CommonJS模块"><a href="#CommonJS模块" class="headerlink" title="CommonJS模块"></a>CommonJS模块</h2><p>定义来模块的语法</p>
+<ul>
+<li>1.什么是commonJS？<br><code>commonjs就是为来了实现javascript模块化，而制定的一套规范</code></li>
+<li>2.为什么要使用commonJs<br><code>为了同意大家写模块时的规范，方便各个模块之间的依赖和调用，所以commonJs就产生</code></li>
+<li>3.commonJS到底是什么东东<ul>
+<li>定义了什么是模块</li>
+<li>定义了模块与模块之间如何去引用，如何去暴露 requore() exports()</li>
+<li>如果没有commonJS的规范，肯定是不行</li>
+<li>大家遵循这个规范，共同协作，方便他人方便自己<h3 id="全局成员"><a href="#全局成员" class="headerlink" title="全局成员"></a>全局成员</h3>1.通过global全局对象，挂载一个 变量或者任意的值<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">在<span class="number">1.</span>js里面</span><br><span class="line"><span class="keyword">var</span> g = <span class="string">"这是一个全局变量"</span></span><br><span class="line">global.g = g;</span><br><span class="line">在<span class="number">2.</span>js里面</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./1.js"</span>)</span><br><span class="line"><span class="built_in">console</span>,log(g)<span class="comment">//"这是一个全局变量"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
 
             </div>
         </div>
@@ -175,7 +192,7 @@
     <span class="page-number"></span>
     
     <a class="older-posts" href="/2018/12/09/let/">
-        次の記事<br>let和const命令
+        Next post<br>let和const命令
     </a>
     
 </nav>
@@ -199,7 +216,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js" integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js" integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
-<script src="/js/journal.js?36916029"></script>
+<script src="/js/journal.js?28719851"></script>
 
 
 
