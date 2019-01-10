@@ -4,12 +4,13 @@
 <html lang="" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 
 <head><meta name="generator" content="Hexo 3.8.0">
-    <title>url解析 - is_BoyTop</title>
+    <title> - is_BoyTop</title>
 <meta charset="utf-8">
 <meta name="X-UA-Compatible" content="IE=edge">
 <meta name="author" content="is_chenxin">
-<meta name="description" content="url解析
-模块：url &amp;amp; querystring1234const &amp;#123;URL&amp;#125; =...">
+<meta name="description" content="—m
+title: url解析url解析
+模块：url &amp;amp; querystring1234const &amp;#...">
 <meta name="keywords" content="">
 
 <link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
@@ -21,7 +22,7 @@
     <meta name="renderer" content="webkit">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/journal.css?78697206">
+<link rel="stylesheet" href="/css/journal.css?40072631">
 <script src="/js/loadCSS.js"></script>
 <script>
     loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
@@ -64,10 +65,10 @@
     <div class="drawer-content">
         <div class="drawer-menu">
             <a class="a-block drawer-menu-item false" href="https://isboyTop.github.io">
-                首页
+                Home
             </a>
             <a class="a-block drawer-menu-item false" href="/archives">
-                归档
+                Archive
             </a>
 
             
@@ -115,7 +116,7 @@
 
     <div class="nav-link-list">
         <a class="a-block no-tint nav-link-item false" href="/archives">
-            归档
+            Archive
         </a>
 
         
@@ -134,7 +135,7 @@
         
         top_ <a href="#" target="_blank" rel="noreferrer noopener">me.</a> by <a href="#" target="_blank" rel="noreferrer noopener">is</a><br>
         
-        &copy; 2018 <a href="https://isboyTop.github.io">is_BoyTop</a>
+        &copy; 2019 <a href="https://isboyTop.github.io">is_BoyTop</a>
     </div>
 </div>
 
@@ -155,7 +156,7 @@
     <div class="post">
         <div class="post-head-wrapper-text-only" style="background-image: url('')">
             <div class="post-title">
-                url解析
+                
                 <div class="post-meta">
                     <time datetime="2018-12-11T06:12:03.368Z" itemprop="datePublished">
                         2018-12-11 14:12
@@ -167,7 +168,8 @@
         </div>
         <div class="post-body-wrapper">
             <div class="post-body">
-                <h1 id="url解析"><a href="#url解析" class="headerlink" title="url解析"></a>url解析</h1><hr>
+                <p>—m</p>
+<h2 id="title-url解析"><a href="#title-url解析" class="headerlink" title="title: url解析"></a>title: url解析</h2><h1 id="url解析"><a href="#url解析" class="headerlink" title="url解析"></a>url解析</h1><hr>
 <p>模块：<code>url</code> &amp; <code>querystring</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;URL&#125; = <span class="built_in">require</span>(<span class="string">"url"</span>);<span class="comment">//解构赋值：定义一个变量URL为引入的url模块内部的URL方法；</span></span><br><span class="line"><span class="keyword">const</span> myUrl = <span class="keyword">new</span> URL(<span class="string">"https://user:pass@sub.host.com:8000/p/a/h?query=string#hash"</span>)</span><br><span class="line">myUrl.hostname = <span class="string">'baidu.com'</span></span><br><span class="line"><span class="built_in">console</span>.log(myUrl)</span><br></pre></td></tr></table></figure></p>
 <p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">URL &#123;</span><br><span class="line">  href: &apos;https://user:pass@baidu.com:8000/p/a/h?query=string#hash&apos;,</span><br><span class="line">  origin: &apos;https://baidu.com:8000&apos;,</span><br><span class="line">  protocol: &apos;https:&apos;,</span><br><span class="line">  username: &apos;user&apos;,</span><br><span class="line">  password: &apos;pass&apos;,</span><br><span class="line">  host: &apos;baidu.com:8000&apos;,</span><br><span class="line">  hostname: &apos;baidu.com&apos;,</span><br><span class="line">  port: &apos;8000&apos;,</span><br><span class="line">  pathname: &apos;/p/a/h&apos;,</span><br><span class="line">  search: &apos;?query=string&apos;,</span><br><span class="line">  searchParams: URLSearchParams &#123; &apos;query&apos; =&gt; &apos;string&apos; &#125;,</span><br><span class="line">  hash: &apos;#hash&apos; &#125;</span><br></pre></td></tr></table></figure></p>
 
@@ -175,10 +177,14 @@
         </div>
         <nav class="post-pagination">
     
+    <a class="newer-posts" href="/2018/12/17/MongoDB/">
+        Previous post<br>MongDB
+    </a>
+    
     <span class="page-number"></span>
     
     <a class="older-posts" href="/2018/12/10/Node.js_01/">
-        下一篇<br>Node.js_01
+        Next post<br>Node.js_01
     </a>
     
 </nav>
@@ -202,7 +208,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js" integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js" integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
-<script src="/js/journal.js?77842471"></script>
+<script src="/js/journal.js?94700955"></script>
 
 
 
